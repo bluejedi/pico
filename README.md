@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h3 align="center">Pico.css</h3>
+<h3 align="center">Pico Admin Dashboard</h3>
 
 <p align="center">
   <strong>Minimal CSS Framework for semantic HTML</strong><br>
