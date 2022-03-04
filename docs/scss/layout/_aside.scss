@@ -6,12 +6,16 @@ main > aside {
 
   nav {
     width: 100%;
+    height: 100%;
+    padding-top: var(--block-spacing-vertical);
     padding-bottom: var(--block-spacing-vertical);
+    padding-right: var(--block-spacing-horizontal);
+    border-right: var(--border-width) solid var(--accordion-border-color);
   
     @media (min-width: map-get($breakpoints, "lg")) {
       position: fixed;
       width: 200px;
-      max-height: calc(100vh - 5.5rem);
+      //max-height: calc(100vh - 5.5rem);
       overflow-x: hidden;
       overflow-y: auto;
     }
@@ -100,9 +104,9 @@ main > aside {
       font-size: 14px;
       text-transform: uppercase;
 
-      &::after {
-        display: none;
-      }
+      //&::after {
+      //  display: none;
+      //}
     }
 
     &[open] {
