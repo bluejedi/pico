@@ -8,8 +8,8 @@ main > aside {
     width: 100%;
     height: 100%;
     padding-top: var(--block-spacing-vertical);
-    padding-bottom: var(--block-spacing-vertical);
     padding-right: var(--block-spacing-horizontal);
+    padding-bottom: var(--block-spacing-vertical);
     border-right: var(--border-width) solid var(--accordion-border-color);
   
     @media (min-width: map-get($breakpoints, "lg")) {
