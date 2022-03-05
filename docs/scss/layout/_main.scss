@@ -8,14 +8,14 @@ $navHeight: 3.5rem;
 // Main grid
 
 body > main {
-  padding-top: var(--block-spacing-vertical);
+  --block-spacing-vertical: calc(var(--spacing) * 1);
 
   @if map-get($breakpoints, "lg") {
     @media (min-width: map-get($breakpoints, "lg")) {
       
-      grid-column-gap: calc(var(--block-spacing-horizontal) * 1);
+      grid-column-gap: calc(var(--block-spacing-horizontal) * 2);
       display: grid;
-      grid-template-columns: 200px auto;
+      grid-template-columns: 250px auto;
     }
   }
 
@@ -37,7 +37,13 @@ body > main {
   }
 
   > div[role="document"] {
-    padding-top: var(--block-spacing-vertical);
+    padding-top: calc(var(--spacing) * 4);
+    > nav {
+      z-index: 99;
+      position: fixed;
+      top: 0;
+      right: var(--spacing);
+    }
   }
 }
 

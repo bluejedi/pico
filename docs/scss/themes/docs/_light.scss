@@ -1,7 +1,14 @@
 // Light theme (Default) [Additions for docs]
 // Can be forced with data-theme="light"
+:root {
+  --font-size: 16px;
+  --block-spacing-vertical: calc(var(--spacing) * 1)
+}
+
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
+  //--font-size: 16px;
+  //--block-spacing-vertical: calc(var(--spacing) * 1)
   --invalid-color: #{$red-800};
   --valid-color: #{$green-700};
   --nav-background-color: #{rgba($white, 0.7)};

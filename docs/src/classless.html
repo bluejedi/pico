@@ -9,12 +9,13 @@
   </head>
 
   <body>
-    ${require('./_nav.html')}
     
-    <main class="container" id="docs">
+    
+    <main class="container-fluid" id="docs">
       ${require('./_sidebar.html') active="classless-link"}
       
       <div role="document">
+        ${require('./_nav.html')}
         <section id="classless">
           <hgroup>
             <h1>Class-less version</h1>

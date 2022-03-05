@@ -10,6 +10,11 @@
   --icon-check-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(0, 0, 0, 0.75)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
+:root {
+  --font-size: 16px;
+  --block-spacing-vertical: calc(var(--spacing) * 1) ;
+}
+
 [data-theme=light],
 :root:not([data-theme=dark]) {
   --invalid-color: #c62828;
@@ -50,13 +55,13 @@ html {
  * Docs: Main (Grid)
  */
 body > main {
-  padding-top: var(--block-spacing-vertical);
+  --block-spacing-vertical: calc(var(--spacing) * 1);
 }
 @media (min-width: 992px) {
   body > main {
-    grid-column-gap: calc(var(--block-spacing-horizontal) * 1);
+    grid-column-gap: calc(var(--block-spacing-horizontal) * 2);
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 250px auto;
   }
 }
 body > main.container-fluid {
@@ -69,7 +74,13 @@ body > main div[role=document] {
   height: 100%;
 }
 body > main > div[role=document] {
-  padding-top: var(--block-spacing-vertical);
+  padding-top: calc(var(--spacing) * 4);
+}
+body > main > div[role=document] > nav {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  right: var(--spacing);
 }
 
 div[role=document] section a[href*="//"]:not([href*="https://picocss.com"]):not([role])::after {
@@ -93,7 +104,7 @@ svg {
 main > aside nav {
   width: 100%;
   height: 100%;
-  padding-top: var(--block-spacing-vertical);
+  padding-top: var(--spacing);
   padding-right: var(--block-spacing-horizontal);
   padding-bottom: var(--block-spacing-vertical);
   border-right: var(--border-width) solid var(--accordion-border-color);
@@ -101,7 +112,7 @@ main > aside nav {
 @media (min-width: 992px) {
   main > aside nav {
     position: fixed;
-    width: 200px;
+    width: 250px;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -150,7 +161,7 @@ main > aside li,
 main > aside summary {
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 main > aside ul {
   padding-left: 0.25rem;
@@ -177,7 +188,9 @@ main > aside details summary {
   color: var(--h1-color);
   font-weight: 300;
   font-size: 14px;
-  text-transform: uppercase;
+}
+main > aside details ul > li {
+  padding-left: calc(var(--block-spacing-horizontal) * 3);
 }
 main > aside details[open] > summary {
   margin-bottom: 0;

@@ -7,12 +7,13 @@
   </head>
 
   <body>
-    ${require('./_nav.html')}
-
-    <main class="container" id="docs">
-      ${require('./_sidebar.html') active="typography-link"}
-
+    <!-- ${require('./_nav.html')}-->
+    
+    <main class="container-fluid" id="docs">
+      ${require('./_sidebar.html') active="containers-link"}
+      
       <div role="document">
+        ${require('./_nav.html')}
         <section id="typography">
           <hgroup>
             <h1>Typography</h1>

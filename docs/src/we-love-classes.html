@@ -9,12 +9,13 @@
   </head>
 
   <body>
-    ${require('./_nav.html')}
+    <!-- ${require('./_nav.html')}-->
     
-    <main class="container" id="docs">
-      ${require('./_sidebar.html') active="we-love-classes-link"}
+    <main class="container-fluid" id="docs">
+      ${require('./_sidebar.html') active="containers-link"}
       
       <div role="document">
+        ${require('./_nav.html')}
         <section id="we-love-classes">
           <h1>We love <code>.classes</code></h1>
           <p>As a starting point, Pico chose to be as neutral and semantic as possible using very few <code>.classes</code></p>

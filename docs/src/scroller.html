@@ -9,12 +9,13 @@
   </head>
 
   <body>
-    ${require('./_nav.html')}
+        <!-- ${require('./_nav.html')}-->
     
-    <main class="container" id="docs">
+    <main class="container-fluid" id="docs">
       ${require('./_sidebar.html') active="scroller-link"}
       
       <div role="document">
+        ${require('./_nav.html')}
         <section id="scroller">
           <hgroup>
             <h1>Horizontal scroller</h1>
