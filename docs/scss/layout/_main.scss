@@ -47,6 +47,12 @@ body > main {
   }
 }
 
+sup > mark {
+  border: 1px solid red;
+  border-radius: 50;
+  background-color: red;
+}
+
 // External links
 div[role="document"] section a[href*="//"]:not([href*="https://picocss.com"]):not([role])::after
 {

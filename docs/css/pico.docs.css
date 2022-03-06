@@ -83,6 +83,12 @@ body > main > div[role=document] > nav {
   right: var(--spacing);
 }
 
+sup > mark {
+  border: 1px solid red;
+  border-radius: 50;
+  background-color: red;
+}
+
 div[role=document] section a[href*="//"]:not([href*="https://picocss.com"]):not([role])::after {
   display: inline-block;
   width: 1rem;
@@ -520,6 +526,49 @@ body > nav ul:first-of-type li:nth-of-type(2) {
   .switcher {
     right: calc(var(--spacing) + var(--scrollbar-width, 0px));
   }
+}
+
+.badge {
+  position: relative;
+  white-space: nowrap;
+}
+.badge[data-badge]::after, .badge:not([data-badge])::after {
+  display: inline-block;
+  transform: translate(-0.05rem, -0.5rem);
+  border-radius: 0.5rem;
+  background: #bcebfb;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 0.1rem 205;
+  content: attr(data-badge);
+  color: #fff;
+}
+.badge[data-badge]::after {
+  min-width: 0.9rem;
+  height: 0.9rem;
+  padding: 0.1rem 0.2rem;
+  font-size: var(--font-size);
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+.badge:not([data-badge])::after, .badge[data-badge=""]::after {
+  width: 6px;
+  min-width: 6px;
+  height: 6px;
+  padding: 0;
+}
+.badge.btn::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.badge.avatar::after {
+  z-index: 99;
+  position: absolute;
+  top: 14.64%;
+  right: 14.64%;
+  transform: translate(50%, -50%);
 }
 
 /*# sourceMappingURL=pico.docs.css.map */
