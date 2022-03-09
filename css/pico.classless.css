@@ -1831,12 +1831,12 @@ details summary::-moz-list-bullet {
 }
 details summary::after {
   display: block;
-  width: 1.5rem;
+  width: 1rem;
   height: 1rem;
   float: right;
   transform: rotate(-90deg);
   background-image: var(--icon-chevron);
-  background-position: right;
+  background-position: right center;
   background-size: 1rem auto;
   background-repeat: no-repeat;
   content: "";
@@ -1853,7 +1853,7 @@ details summary[role=button] {
   text-align: left;
 }
 details summary[role=button]::after {
-  height: calc(1rem * var(--line-height));
+  height: calc(1rem * var(--line-height, 1.5));
   background-image: var(--icon-chevron-button);
 }
 details[open] > summary {
@@ -1878,8 +1878,8 @@ details[open] > summary::after {
  * Card (<article>)
  */
 article {
-  margin: var(--block-spacing-vertical) 0;
-  padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+  margin: var(--block-spacing-horizontal) 0;
+  padding: var(--block-spacing-horizontal) var(--block-spacing-horizontal);
   border-radius: var(--border-radius);
   background: var(--card-background-color);
   box-shadow: var(--card-box-shadow);

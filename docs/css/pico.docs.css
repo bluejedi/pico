@@ -61,12 +61,12 @@ body > main {
   body > main {
     grid-column-gap: calc(var(--block-spacing-horizontal) * 2);
     display: grid;
-    grid-template-columns: 250px auto;
+    grid-template-columns: 200px auto;
   }
 }
 body > main.container-fluid {
   padding-top: 0;
-  padding-left: var(--block-spacing-horizontal);
+  padding-left: 0;
 }
 body > main > aside,
 body > main div[role=document] {
@@ -107,18 +107,21 @@ svg {
 /**
  * Docs: Aside
  */
+main > aside {
+  background-color: var(--card-background-color);
+  width: 100%;
+  background-color: var(--card-background-color);
+}
 main > aside nav {
   width: 100%;
   height: 100%;
-  padding-top: var(--spacing);
-  padding-right: var(--block-spacing-horizontal);
-  padding-bottom: var(--block-spacing-vertical);
+  padding: var(--spacing);
   border-right: var(--border-width) solid var(--accordion-border-color);
 }
 @media (min-width: 992px) {
   main > aside nav {
     position: fixed;
-    width: 250px;
+    width: 200px;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -196,7 +199,7 @@ main > aside details summary {
   font-size: 14px;
 }
 main > aside details ul > li {
-  padding-left: calc(var(--block-spacing-horizontal) * 3);
+  padding-left: calc(var(--block-spacing-horizontal) * 2.2);
 }
 main > aside details[open] > summary {
   margin-bottom: 0;
