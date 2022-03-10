@@ -3,7 +3,7 @@
   <head>
     ${require('./_head.html') 
       title="Dashboard" 
-      description="&lt;figure&gt; acts as a container to make any dashboard content."
+      description="&lt;figure&gt; My App dashboard."
       canonical="dashboard.html"
     }
   </head>
@@ -15,14 +15,17 @@
       ${require('./_sidebar.html') active="dashboard-link"}
       
       <div role="document">
-        ${require('./_nav.html')}
+        ${require('./_nav.html')
+          title="Dashboard"
+        }
+
         <section id="scroller">
           <header>
             
             <nav>
               <hgroup>
                 <h1>Dashboard</h1>
-                <h2>acts as a container to make any dashboard content..</h2>
+                <h2>My App dashboard content..</h2>
               </hgroup>
               <ul>
                 <li><button class="secondary">New View</button></li>

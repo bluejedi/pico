@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://picocss.com/">
-    <img src="https://picocss.com/img/logo.svg" width="64" height="64">
+  <a href="#">
+    <img src="pico-dashboard.png" width="64" height="64">
   </a>
 </p>
 
