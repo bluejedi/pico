@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#">
-    <img src="pico-dashboard.png" width="64" height="64">
+    <img src="pico-dashboard.png" width="100%" height="100%">
   </a>
 </p>
 
